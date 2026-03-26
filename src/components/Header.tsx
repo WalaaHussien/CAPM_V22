@@ -95,11 +95,16 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo - swaps between light/dark based on scroll */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center relative h-12 md:h-14">
             <img
-              src={isScrolled ? darkLogo : lightLogo}
+              src={darkLogo}
               alt="CapitalMed"
-              className="h-12 md:h-14 w-auto object-contain transition-all duration-500"
+              className={`h-full w-auto object-contain absolute left-0 transition-opacity duration-500 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
+            />
+            <img
+              src={lightLogo}
+              alt="CapitalMed"
+              className={`h-full w-auto object-contain absolute left-0 transition-opacity duration-500 ${isScrolled ? 'opacity-0' : 'opacity-100'}`}
             />
           </Link>
 
