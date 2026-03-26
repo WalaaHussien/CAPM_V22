@@ -58,7 +58,7 @@ const InvestmentPage: React.FC = () => {
                 <opp.icon className="w-8 h-8 text-accent mb-4" />
                 <h3 className="font-semibold mb-2">{opp.title}</h3>
                 <p className="text-muted-foreground text-sm mb-3">{opp.desc}</p>
-                <ul className="space-y-1">{opp.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-secondary" />{item}</li>))}</ul>
+                <ul className="space-y-1">{opp.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-accent" />{item}</li>))}</ul>
               </motion.div>
             ))}
           </motion.div>
