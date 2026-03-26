@@ -81,7 +81,7 @@ const ServicesPage: React.FC = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   {t(`services.${service.key}.desc`)}
                 </p>
-                <div className={`flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`flex items-center gap-2 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t('services.learn.more')}</span>
                   <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
                 </div>

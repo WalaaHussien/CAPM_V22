@@ -122,7 +122,7 @@ const AboutPage: React.FC = () => {
                   {index < milestones.length - 1 && <div className="w-px flex-1 bg-border mt-2" />}
                 </div>
                 <div className="premium-card flex-1 p-5">
-                  <span className="text-primary text-sm font-bold">{milestone.year}</span>
+                  <span className="text-accent text-sm font-bold">{milestone.year}</span>
                   <p className="text-muted-foreground text-sm mt-1">{t(milestone.key)}</p>
                 </div>
               </motion.div>

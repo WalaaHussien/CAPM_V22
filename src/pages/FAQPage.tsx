@@ -77,7 +77,7 @@ const FAQPage: React.FC = () => {
               { icon: ArrowRight, title: t('faq.help.callback'), desc: t('faq.help.callback.desc'), btn: t('faq.help.callback.btn'), variant: 'outline' as const },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
-                <item.icon className="w-6 h-6 text-primary mx-auto mb-3" />
+                <item.icon className="w-6 h-6 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
                 <p className="text-xs text-muted-foreground mb-3">{item.desc}</p>
                 <Button size="sm" variant={item.variant} className="rounded-[8px]">{item.btn}</Button>

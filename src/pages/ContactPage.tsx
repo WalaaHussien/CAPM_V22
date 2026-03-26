@@ -100,7 +100,7 @@ const ContactPage: React.FC = () => {
                   <Label htmlFor="message" className="text-sm">{t('contact.form.message')}</Label>
                   <Textarea id="message" rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required className="rounded-[6px]" />
                 </div>
-                <Button type="submit" size="lg" className="w-full sm:w-auto rounded-[8px] bg-primary hover:bg-primary/90">
+                <Button type="submit" size="lg" className="w-full sm:w-auto rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Send className={`w-4 h-4 ${isRTL ? 'ml-2 rotate-180' : 'mr-2'}`} />
                   {t('contact.form.submit')}
                 </Button>

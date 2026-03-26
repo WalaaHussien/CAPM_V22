@@ -95,7 +95,7 @@ const FacilitiesPage: React.FC = () => {
                 <ul className="space-y-2">
                   {cat.items.map((item, j) => (
                     <li key={j} className="text-muted-foreground text-sm flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-secondary" />{item}
+                      <span className="w-1 h-1 rounded-full bg-accent" />{item}
                     </li>
                   ))}
                 </ul>

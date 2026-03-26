@@ -78,7 +78,7 @@ const InvestmentPage: React.FC = () => {
             className="bg-primary/5 border border-primary/15 rounded-xl p-6 md:p-10 text-center">
             <h2 className="text-xl md:text-2xl font-bold mb-5">{t('investment.cta.title')}</h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
-              <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto">{t('investment.cta.visit')}</Button></Link>
+              <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">{t('investment.cta.visit')}</Button></Link>
               <Button size="lg" variant="outline" className="rounded-[8px] w-full sm:w-auto">{t('investment.cta.download')}</Button>
             </div>
           </motion.div>

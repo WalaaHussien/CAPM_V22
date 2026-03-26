@@ -57,7 +57,7 @@ const PartnershipsPage: React.FC = () => {
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
             {areas.map((area, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
-                <area.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                <area.icon className="w-8 h-8 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{area.title}</h3>
                 <p className="text-xs text-muted-foreground">{area.desc}</p>
               </motion.div>
