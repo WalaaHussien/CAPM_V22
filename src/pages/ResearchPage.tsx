@@ -54,7 +54,7 @@ const ResearchPage: React.FC = () => {
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
             {researchAreas.map((area, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
-                <area.icon className="w-6 h-6 text-primary mb-4" />
+                <area.icon className="w-6 h-6 text-accent mb-4" />
                 <h3 className="font-semibold mb-2">{area.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{area.desc}</p>
                 <Badge variant="outline" className="text-xs">{t('research.planned')}</Badge>

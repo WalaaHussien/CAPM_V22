@@ -69,7 +69,7 @@ const LocationPage: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center gap-4 mb-16">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=30.10753823911962,31.753867557671754" target="_blank" rel="noopener noreferrer"><Button size="lg" className="rounded-[8px]"><MapPin className="w-4 h-4 mr-2" />{t('location.directions')}</Button></a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=30.10753823911962,31.753867557671754" target="_blank" rel="noopener noreferrer"><Button size="lg" className="rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground"><MapPin className="w-4 h-4 mr-2" />{t('location.directions')}</Button></a>
             <a href="https://www.google.com/maps?q=30.10753823911962,31.753867557671754&t=k" target="_blank" rel="noopener noreferrer"><Button size="lg" variant="outline" className="rounded-[8px]">{t('location.satellite')}</Button></a>
           </div>
           <div className="grid md:grid-cols-2 gap-5 max-w-2xl mx-auto mb-20">
@@ -125,7 +125,7 @@ const LocationPage: React.FC = () => {
             <h2 className="text-2xl font-bold mb-5">{t('location.cta.title')}</h2>
             <p className="text-muted-foreground text-sm mb-5">{t('location.cta.subtitle')}</p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
-              <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto">{t('location.cta.schedule')}</Button></Link>
+              <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">{t('location.cta.schedule')}</Button></Link>
               <Link to="/medical-tourism" className="w-full sm:w-auto"><Button size="lg" variant="outline" className="rounded-[8px] w-full sm:w-auto">{t('location.cta.tourism')}</Button></Link>
             </div>
           </motion.div>

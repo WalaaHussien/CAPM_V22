@@ -93,7 +93,7 @@ const CareersPage: React.FC = () => {
                   </div>
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button size="sm" className="rounded-[8px]">{t('careers.viewDetails')}</Button>
+                      <Button size="sm" className="rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground">{t('careers.viewDetails')}</Button>
                     </DialogTrigger>
                     <DialogContent className={`sm:max-w-[500px] ${isAr ? 'text-right' : 'text-left'}`}>
                       <DialogHeader>
@@ -118,7 +118,7 @@ const CareersPage: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex justify-end pt-4 border-t border-border/30">
-                        <Button className="w-full sm:w-auto rounded-[8px]">{isAr ? 'قدم الآن' : 'Apply Now'}</Button>
+                        <Button className="w-full sm:w-auto rounded-[8px] bg-accent hover:bg-accent/90 text-accent-foreground">{isAr ? 'قدم الآن' : 'Apply Now'}</Button>
                       </div>
                     </DialogContent>
                   </Dialog>

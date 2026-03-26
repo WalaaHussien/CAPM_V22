@@ -198,7 +198,7 @@ const DoctorsPage: React.FC = () => {
                   <p className="text-primary text-sm font-medium mb-1">{language === 'ar' ? doctor.specialty_ar : doctor.specialty_en}</p>
                   <p className="text-xs text-muted-foreground mb-3">{t('doctors.experience').replace('{years}', doctor.experience.toString())}</p>
                   <div className="flex gap-2">
-                    <Button size="sm" className="flex-1 rounded-[8px] text-xs bg-primary hover:bg-primary/90">
+                    <Button size="sm" className="flex-1 rounded-[8px] text-xs bg-accent hover:bg-accent/90 text-accent-foreground">
                       <Calendar className="w-3.5 h-3.5 mr-1" />{t('doctors.book')}
                     </Button>
                     <Button size="sm" variant="outline" className="rounded-[8px]"><Phone className="w-3.5 h-3.5" /></Button>

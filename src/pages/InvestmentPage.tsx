@@ -55,10 +55,10 @@ const InvestmentPage: React.FC = () => {
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-3 gap-5 mb-20">
             {opportunities.map((opp, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
-                <opp.icon className="w-8 h-8 text-primary mb-4" />
+                <opp.icon className="w-8 h-8 text-accent mb-4" />
                 <h3 className="font-semibold mb-2">{opp.title}</h3>
                 <p className="text-muted-foreground text-sm mb-3">{opp.desc}</p>
-                <ul className="space-y-1">{opp.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-secondary" />{item}</li>))}</ul>
+                <ul className="space-y-1">{opp.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-accent" />{item}</li>))}</ul>
               </motion.div>
             ))}
           </motion.div>
@@ -78,7 +78,7 @@ const InvestmentPage: React.FC = () => {
             className="bg-primary/5 border border-primary/15 rounded-xl p-6 md:p-10 text-center">
             <h2 className="text-xl md:text-2xl font-bold mb-5">{t('investment.cta.title')}</h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
-              <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto">{t('investment.cta.visit')}</Button></Link>
+              <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">{t('investment.cta.visit')}</Button></Link>
               <Button size="lg" variant="outline" className="rounded-[8px] w-full sm:w-auto">{t('investment.cta.download')}</Button>
             </div>
           </motion.div>

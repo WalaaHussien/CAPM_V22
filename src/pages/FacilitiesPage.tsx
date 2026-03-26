@@ -90,12 +90,12 @@ const FacilitiesPage: React.FC = () => {
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-3 gap-5 mb-20">
             {amenities.map((cat, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
-                <cat.icon className="w-6 h-6 text-primary mb-4" />
+                <cat.icon className="w-6 h-6 text-accent mb-4" />
                 <h3 className="font-semibold mb-3">{cat.title}</h3>
                 <ul className="space-y-2">
                   {cat.items.map((item, j) => (
                     <li key={j} className="text-muted-foreground text-sm flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-secondary" />{item}
+                      <span className="w-1 h-1 rounded-full bg-accent" />{item}
                     </li>
                   ))}
                 </ul>

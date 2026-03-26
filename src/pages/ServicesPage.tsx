@@ -72,8 +72,8 @@ const ServicesPage: React.FC = () => {
                 whileHover={{ y: -4, boxShadow: '0 12px 24px -4px rgba(0,40,100,0.08)' }}
                 className="group premium-card p-6 cursor-pointer"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/8 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors duration-300">
-                  <service.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent transition-colors duration-300">
+                  <service.icon className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">
                   {t(`services.${service.key}.title`)}
@@ -81,7 +81,7 @@ const ServicesPage: React.FC = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3">
                   {t(`services.${service.key}.desc`)}
                 </p>
-                <div className={`flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <div className={`flex items-center gap-2 text-accent text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t('services.learn.more')}</span>
                   <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
                 </div>

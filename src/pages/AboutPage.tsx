@@ -54,9 +54,9 @@ const AboutPage: React.FC = () => {
               <div className="rounded-xl overflow-hidden">
                 <img src={hospitalPhase1} alt="CapitalMed" className="w-full h-[400px] object-cover" />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-primary text-primary-foreground rounded-xl p-5 shadow-lg">
+              <div className="absolute -bottom-5 -right-5 bg-accent text-accent-foreground rounded-xl p-5 shadow-lg">
                 <span className="text-2xl font-bold block">6+</span>
-                <span className="text-xs text-primary-foreground/70">{t('about.years')}</span>
+                <span className="text-xs text-accent-foreground/70">{t('about.years')}</span>
               </div>
             </motion.div>
           </div>
@@ -68,7 +68,7 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { icon: Target, title: t('about.mission'), text: t('about.mission.text'), color: 'bg-primary/10', iconColor: 'text-primary' },
+              { icon: Target, title: t('about.mission'), text: t('about.mission.text'), color: 'bg-accent/10', iconColor: 'text-accent' },
               { icon: Eye, title: t('about.vision'), text: t('about.vision.text'), color: 'bg-secondary/10', iconColor: 'text-secondary' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -95,8 +95,8 @@ const AboutPage: React.FC = () => {
             {values.map((value) => (
               <motion.div key={value.key} variants={fadeUp} whileHover={{ y: -3 }}
                 className="premium-card text-center p-6">
-                <div className="w-12 h-12 rounded-full bg-primary/8 flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-6 h-6 text-accent" />
                 </div>
                 <h3 className="font-semibold">{t(value.key)}</h3>
               </motion.div>
@@ -116,13 +116,13 @@ const AboutPage: React.FC = () => {
               <motion.div key={milestone.year} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
                 className="flex gap-5">
                 <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-xs font-bold">
+                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-accent-foreground text-xs font-bold">
                     {milestone.year.slice(-2)}
                   </div>
                   {index < milestones.length - 1 && <div className="w-px flex-1 bg-border mt-2" />}
                 </div>
                 <div className="premium-card flex-1 p-5">
-                  <span className="text-primary text-sm font-bold">{milestone.year}</span>
+                  <span className="text-accent text-sm font-bold">{milestone.year}</span>
                   <p className="text-muted-foreground text-sm mt-1">{t(milestone.key)}</p>
                 </div>
               </motion.div>
