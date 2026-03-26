@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
               alt="CapitalMed"
               className="h-16 w-auto object-contain mb-6"
             />
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
+            <p className="text-white/80 text-sm leading-relaxed mb-6">
               {t('footer.description')}
             </p>
             <div className="flex gap-2">
