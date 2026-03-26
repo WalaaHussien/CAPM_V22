@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             <img
               src={capitalmedLogo}
               alt="CapitalMed"
-              className="h-12 w-auto object-contain mb-6"
+              className="h-16 w-auto object-contain mb-6"
             />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               {t('footer.description')}
