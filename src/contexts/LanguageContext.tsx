@@ -641,10 +641,10 @@ const translations: Record<Language, Record<string, string>> = {
     'about.corporate.cira': 'CIRA',
     'about.corporate.cira.desc': 'Cairo for Investment and Real Estate Development S.A.E.',
 
-    // Facilities - 19 Institutes
-    'facilities.institutes.label': '19 Integrated Facilities',
+    // Facilities - 26 Services Mix
+    'facilities.institutes.label': '26 Integrated Facilities',
     'facilities.institutes.title': 'CAPITALMED Services Mix',
-    'facilities.institutes.subtitle': 'A comprehensive ecosystem of 19 fully integrated facilities, each catering to specific needs',
+    'facilities.institutes.subtitle': 'A comprehensive ecosystem of 26 fully integrated facilities, each catering to specific needs',
     'facilities.inst.universityHospital': 'University Hospital Center',
     'facilities.inst.universityHospital.desc': 'The flagship hospital with 4,000+ beds and full-spectrum medical services.',
     'facilities.inst.doctorsPlaza': "Doctors' Plaza",
