@@ -137,8 +137,8 @@ const Hero: React.FC = () => {
             {[
               { value: '577K m²', label: 'Campus Area' },
               { value: '$1.2B', label: 'Investment' },
-              { value: '4,500+', label: 'Hospital Beds' },
-              { value: '100+', label: 'Specialties' },
+              { value: '4,000+', label: 'Hospital Beds' },
+              { value: '15,000+', label: 'Healthcare Providers' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
