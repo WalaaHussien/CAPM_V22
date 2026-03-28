@@ -23,8 +23,10 @@ import DevelopmentPhasesPage from "./pages/DevelopmentPhasesPage";
 import LocationPage from "./pages/LocationPage";
 import FAQPage from "./pages/FAQPage";
 import CampusMapPage from "./pages/CampusMapPage";
+import PatientPortalPage from "./pages/PatientPortalPage";
 import NotFound from "./pages/NotFound";
 import Chatbot from "@/components/Chatbot";
+import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 const queryClient = new QueryClient();
 
@@ -55,10 +57,12 @@ const App = () => (
               <Route path="/location" element={<LocationPage />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/campus-map" element={<CampusMapPage />} />
+              <Route path="/patient-portal" element={<PatientPortalPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Chatbot />
+            <AccessibilityWidget />
           </HashRouter>
         </TooltipProvider>
       </CMSProvider>

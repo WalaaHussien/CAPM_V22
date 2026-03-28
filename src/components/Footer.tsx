@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
     t('nav.medicalTourism'),
     t('nav.research'),
     t('nav.contact'),
+    t('nav.patientPortal'),
   ];
 
   const socialLinks = [
@@ -72,6 +73,7 @@ const Footer: React.FC = () => {
                 { label: t('nav.doctors'), href: '/doctors' },
                 { label: t('nav.medicalTourism'), href: '/medical-tourism' },
                 { label: t('nav.research'), href: '/research' },
+                { label: t('nav.patientPortal'), href: '/patient-portal' },
                 { label: t('nav.contact'), href: '/contact' },
               ].map((link, index) => (
                 <li key={index}>
