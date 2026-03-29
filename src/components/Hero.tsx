@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
     <section
       id="home"
       ref={containerRef}
-      className="relative h-screen min-h-[500px] max-h-[900px] flex items-end sm:items-center overflow-hidden -mt-[calc(2.25rem+5rem)] md:-mt-[calc(2.25rem+6rem)] pt-[calc(2.25rem+5rem)] md:pt-[calc(2.25rem+6rem)]"
+      className="relative h-[80vh] min-h-[500px] max-h-[900px] flex items-end sm:items-center overflow-hidden"
     >
       {/* Background - smooth crossfade with blur */}
       <div className="absolute inset-0">

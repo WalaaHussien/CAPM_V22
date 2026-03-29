@@ -1,3 +1,4 @@
+import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import {
@@ -154,6 +155,7 @@ const MedicalTourismPage: React.FC = () => {
             </motion.div>
           </motion.div>
         </section>
+      <QuickAccessBar />
 
         {/* I. Strategic Positioning - Alternating layout */}
         <section className="container mx-auto px-6 py-24">

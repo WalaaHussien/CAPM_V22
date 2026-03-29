@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
+import QuickAccessBar from '@/components/QuickAccessBar';
 import Stats from '@/components/Stats';
 import Services from '@/components/Services';
 import About from '@/components/About';
@@ -17,6 +18,7 @@ const Index: React.FC = () => {
     >
       <main>
         <Hero />
+        <QuickAccessBar />
         <Pillars />
         <Stats />
         <Services />

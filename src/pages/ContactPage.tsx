@@ -1,3 +1,4 @@
+import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
@@ -40,6 +41,7 @@ const ContactPage: React.FC = () => {
             className="text-lg text-white/60 max-w-2xl mx-auto">{t('contact.page.subtitle')}</motion.p>
         </div>
       </section>
+      <QuickAccessBar />
 
       {/* Contact Info Cards */}
       <section className="py-10 -mt-10 relative z-10">
