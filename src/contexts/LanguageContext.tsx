@@ -32,7 +32,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.location': 'Location',
     'nav.faq': 'FAQ',
     'nav.patientPortal': 'Patient Portal',
-    'nav.healthcareOverview': 'Healthcare Overview',
+    'nav.healthcareOverview': 'Healthcare',
 
     // MegaMenu descriptions
     'mega.corporate': 'Corporate',
