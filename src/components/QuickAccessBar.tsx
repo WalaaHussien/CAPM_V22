@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { LogOut, Stethoscope, CalendarCheck, Siren, Phone } from 'lucide-react';
+import { Stethoscope, CalendarCheck, Siren, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
