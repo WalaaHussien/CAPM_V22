@@ -446,7 +446,7 @@ const InfoPanel: React.FC<{ building: BuildingData; onClose: () => void; onNavig
           {isAr ? 'انتقل إلى هنا' : 'Navigate Here'}
         </button>
       </div>
-    </PageLayout>
+    </motion.div>
   );
 };
 
@@ -605,10 +605,10 @@ const CampusMapPage: React.FC = () => {
                     </button>
                   );
                 })}
-              </PageLayout>
+              </motion.div>
             )}
           </AnimatePresence>
-        </PageLayout>
+        </motion.div>
 
         {/* ─── Virtual Tour Overlay ─── */}
         <AnimatePresence>
@@ -627,7 +627,7 @@ const CampusMapPage: React.FC = () => {
                   <button onClick={() => setTourIndex(i => (i + 1) % buildings.length)} className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80"><ChevronRight className="w-4 h-4 text-foreground" /></button>
                 </div>
               </div>
-            </PageLayout>
+            </motion.div>
           )}
         </AnimatePresence>
 
@@ -673,7 +673,7 @@ const CampusMapPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </PageLayout>
+        </motion.div>
 
         {/* ─── Directory Panel ─── */}
         <AnimatePresence>
@@ -717,7 +717,7 @@ const CampusMapPage: React.FC = () => {
                   );
                 })}
               </div>
-            </PageLayout>
+            </motion.div>
           )}
         </AnimatePresence>
 
@@ -756,7 +756,7 @@ const CampusMapPage: React.FC = () => {
                     animate={{ width: `${totalProgress * 100}%` }} />
                 </div>
               </div>
-            </PageLayout>
+            </motion.div>
           )}
         </AnimatePresence>
 
@@ -780,7 +780,7 @@ const CampusMapPage: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </PageLayout>
+            </motion.div>
           )}
         </AnimatePresence>
 
