@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -29,8 +28,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
 
       <section className="page-hero">
         <div className="container mx-auto px-6 relative z-10 text-center">
@@ -60,7 +58,7 @@ const ContactPage: React.FC = () => {
                 ) : (
                   <p className="text-muted-foreground text-xs">{t(info.content)}</p>
                 )}
-              </motion.div>
+              </PageLayout>
             ))}
           </div>
         </div>
@@ -105,7 +103,7 @@ const ContactPage: React.FC = () => {
                   {t('contact.form.submit')}
                 </Button>
               </form>
-            </motion.div>
+            </PageLayout>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
               className="rounded-xl overflow-hidden min-h-[400px] relative">
               <iframe
@@ -113,7 +111,7 @@ const ContactPage: React.FC = () => {
                 width="100%" height="100%" style={{ border: 0, minHeight: '400px' }} allowFullScreen loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade" title="CapitalMed Location"
               />
-            </motion.div>
+            </PageLayout>
           </div>
         </div>
       </section>
@@ -124,7 +122,7 @@ const ContactPage: React.FC = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('contact.faq.title')}</h2>
             <p className="section-subtitle">{t('contact.faq.subtitle')}</p>
-          </motion.div>
+          </PageLayout>
           <div className="max-w-2xl mx-auto">
             <Accordion type="single" collapsible className="space-y-2">
               {[1, 2, 3, 4].map((faq) => (
@@ -142,8 +140,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

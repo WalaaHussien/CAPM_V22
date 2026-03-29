@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Clock, Calendar } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -24,8 +23,7 @@ const DevelopmentPhasesPage: React.FC = () => {
   const milestones = language === 'ar' ? [{ year: '٢٠٢٢', event: 'وضع حجر الأساس' }, { year: '٢٠٢٤', event: 'اكتمال المرحلة الأولى' }, { year: '٢٠٢٥', event: 'استقبال أول المرضى' }, { year: '٢٠٢٧', event: 'اكتمال المرحلة الثانية' }, { year: '٢٠٣٠', event: 'تشغيل المدينة بالكامل' }] : [{ year: '2022', event: 'Project Groundbreaking' }, { year: '2024', event: 'Phase 1 Completion' }, { year: '2025', event: 'First Patients Admitted' }, { year: '2027', event: 'Phase 2 Completion' }, { year: '2030', event: 'Full City Operational' }];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -33,7 +31,7 @@ const DevelopmentPhasesPage: React.FC = () => {
               <p className="text-secondary text-sm font-medium mb-1">70%</p>
               <Progress value={70} className="max-w-xs mx-auto mb-1" />
               <p className="text-xs text-white/50">{t('dev.hero.progress')}</p>
-            </motion.div>
+            </PageLayout>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold text-white mb-4">{t('dev.hero.title')}</motion.h1>
             <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
@@ -41,7 +39,7 @@ const DevelopmentPhasesPage: React.FC = () => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
               className="flex justify-center gap-8 flex-wrap">
               {stats.map((s, i) => (<div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/50">{s.label}</p></div>))}
-            </motion.div>
+            </PageLayout>
           </div>
         </section>
         <section className="container mx-auto px-6 py-20">
@@ -62,7 +60,7 @@ const DevelopmentPhasesPage: React.FC = () => {
                   <p className="text-muted-foreground text-sm mb-3">{phase.desc}</p>
                   <ul className="grid grid-cols-2 gap-2">{phase.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2">{phase.statusType === 'completed' ? <CheckCircle2 className="w-3.5 h-3.5 text-secondary" /> : <Clock className="w-3.5 h-3.5 text-muted-foreground" />}{item}</li>))}</ul>
                 </div>
-              </motion.div>
+              </PageLayout>
             ))}
           </div>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -73,13 +71,12 @@ const DevelopmentPhasesPage: React.FC = () => {
                 <Calendar className="w-5 h-5 text-primary mx-auto mb-2" />
                 <p className="text-xl font-bold text-primary">{m.year}</p>
                 <p className="text-xs text-muted-foreground">{m.event}</p>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

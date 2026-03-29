@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MessageCircle, Phone, ArrowRight } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -34,8 +33,7 @@ const FAQPage: React.FC = () => {
   const filteredFaqs = faqs.filter(f => f.q.toLowerCase().includes(search.toLowerCase()) || f.a.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         {/* Hero */}
         <section className="page-hero">
@@ -48,7 +46,7 @@ const FAQPage: React.FC = () => {
               className="relative max-w-lg mx-auto">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input placeholder={t('faq.search.placeholder')} value={search} onChange={e => setSearch(e.target.value)} className="pl-11 h-11 rounded-[6px] bg-white text-foreground" />
-            </motion.div>
+            </PageLayout>
           </div>
         </section>
         <section className="container mx-auto px-6 py-20 max-w-2xl">
@@ -61,7 +59,7 @@ const FAQPage: React.FC = () => {
                   <AccordionTrigger className="text-left text-sm hover:no-underline">{faq.q}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground text-sm">{faq.a}</AccordionContent>
                 </AccordionItem>
-              </motion.div>
+              </PageLayout>
             ))}
           </Accordion>
           {filteredFaqs.length === 0 && <p className="text-center text-muted-foreground py-8">{t('careers.noResults')}</p>}
@@ -81,13 +79,12 @@ const FAQPage: React.FC = () => {
                 <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
                 <p className="text-xs text-muted-foreground mb-3">{item.desc}</p>
                 <Button size="sm" variant={item.variant} className="rounded-[8px]">{item.btn}</Button>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

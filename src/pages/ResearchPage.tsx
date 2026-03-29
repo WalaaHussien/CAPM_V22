@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FlaskConical, Brain, Heart, Dna, Bug, Leaf, Cpu, BookOpen, Users } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -27,8 +26,7 @@ const ResearchPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -46,11 +44,11 @@ const ResearchPage: React.FC = () => {
             <h2 className="section-title mb-4">{t('research.vision.title')}</h2>
             <p className="text-muted-foreground leading-relaxed mb-3">{t('research.vision.p1')}</p>
             <p className="text-muted-foreground leading-relaxed">{t('research.vision.p2')}</p>
-          </motion.div>
+          </PageLayout>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('research.areas.title')}</h2>
-          </motion.div>
+          </PageLayout>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
             {researchAreas.map((area, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
@@ -58,27 +56,26 @@ const ResearchPage: React.FC = () => {
                 <h3 className="font-semibold mb-2">{area.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{area.desc}</p>
                 <Badge variant="outline" className="text-xs">{t('research.planned')}</Badge>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-4">
             <h2 className="section-title">{t('research.ecosystem.title')}</h2>
             <p className="section-subtitle">{t('research.ecosystem.subtitle')}</p>
-          </motion.div>
+          </PageLayout>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
             {ecosystem.map((item, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
                 <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

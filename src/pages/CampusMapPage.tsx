@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-import Header from '@/components/Header';
+import PageLayout from '@/components/PageLayout';
 
 /* ─── Types ─── */
 type BuildingType = 'hospital' | 'emergency' | 'research' | 'wellness' | 'hotel' | 'commercial' | 'admin';
@@ -446,7 +446,7 @@ const InfoPanel: React.FC<{ building: BuildingData; onClose: () => void; onNavig
           {isAr ? 'انتقل إلى هنا' : 'Navigate Here'}
         </button>
       </div>
-    </motion.div>
+    </PageLayout>
   );
 };
 
@@ -549,7 +549,6 @@ const CampusMapPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
-      <Header />
       <div className="relative h-screen pt-16">
         {/* ─── 3D Canvas ─── */}
         <Canvas shadows camera={{ position: [0, 60, 80], fov: 45 }} className="absolute inset-0"
@@ -606,10 +605,10 @@ const CampusMapPage: React.FC = () => {
                     </button>
                   );
                 })}
-              </motion.div>
+              </PageLayout>
             )}
           </AnimatePresence>
-        </motion.div>
+        </PageLayout>
 
         {/* ─── Virtual Tour Overlay ─── */}
         <AnimatePresence>
@@ -628,7 +627,7 @@ const CampusMapPage: React.FC = () => {
                   <button onClick={() => setTourIndex(i => (i + 1) % buildings.length)} className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80"><ChevronRight className="w-4 h-4 text-foreground" /></button>
                 </div>
               </div>
-            </motion.div>
+            </PageLayout>
           )}
         </AnimatePresence>
 
@@ -674,7 +673,7 @@ const CampusMapPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </PageLayout>
 
         {/* ─── Directory Panel ─── */}
         <AnimatePresence>
@@ -718,7 +717,7 @@ const CampusMapPage: React.FC = () => {
                   );
                 })}
               </div>
-            </motion.div>
+            </PageLayout>
           )}
         </AnimatePresence>
 
@@ -757,7 +756,7 @@ const CampusMapPage: React.FC = () => {
                     animate={{ width: `${totalProgress * 100}%` }} />
                 </div>
               </div>
-            </motion.div>
+            </PageLayout>
           )}
         </AnimatePresence>
 
@@ -781,7 +780,7 @@ const CampusMapPage: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </PageLayout>
           )}
         </AnimatePresence>
 

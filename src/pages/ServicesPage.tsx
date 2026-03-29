@@ -5,8 +5,7 @@ import {
   Pill, Syringe, Activity, Microscope, Ribbon, Ear,
   ArrowRight, AlertTriangle
 } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -41,8 +40,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
 
       {/* Hero with staggered animations */}
       <section className="page-hero">
@@ -86,9 +84,9 @@ const ServicesPage: React.FC = () => {
                   <span>{t('services.learn.more')}</span>
                   <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
                 </div>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
         </div>
       </section>
 
@@ -116,11 +114,11 @@ const ServicesPage: React.FC = () => {
               <Button size="lg" className="bg-destructive hover:bg-destructive/90 text-white rounded-[8px]">
                 {t('services.emergency.call')}
               </Button>
-            </motion.div>
+            </PageLayout>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
               className="aspect-video rounded-xl overflow-hidden bg-white/5 border border-white/10">
               <img src={heroImage2} alt="Emergency" className="w-full h-full object-cover opacity-80" />
-            </motion.div>
+            </PageLayout>
           </div>
         </div>
       </section>
@@ -142,12 +140,11 @@ const ServicesPage: React.FC = () => {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </PageLayout>
         </div>
       </section>
 
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

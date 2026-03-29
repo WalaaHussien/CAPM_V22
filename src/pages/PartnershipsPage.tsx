@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Microscope, Stethoscope, Cpu, Building2, ExternalLink } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -41,8 +40,7 @@ const PartnershipsPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -56,7 +54,7 @@ const PartnershipsPage: React.FC = () => {
               {[{ n: '15+', l: t('partnerships.stats.partners') }, { n: '8', l: t('partnerships.stats.countries') }, { n: '4', l: t('partnerships.stats.continents') }].map((s, i) => (
                 <div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.n}</p><p className="text-xs text-white/50">{s.l}</p></div>
               ))}
-            </motion.div>
+            </PageLayout>
           </div>
         </section>
 
@@ -67,7 +65,7 @@ const PartnershipsPage: React.FC = () => {
               <p className="section-label">Corporate Structure</p>
               <h2 className="section-title">Brand Architecture</h2>
               <p className="section-subtitle">A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla</p>
-            </motion.div>
+            </PageLayout>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {brandEntities.map((entity, i) => (
                 <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-5 text-center">
@@ -76,9 +74,9 @@ const PartnershipsPage: React.FC = () => {
                   </div>
                   <h3 className="font-semibold text-sm mb-2">{entity.name}</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">{entity.desc}</p>
-                </motion.div>
+                </PageLayout>
               ))}
-            </motion.div>
+            </PageLayout>
           </div>
         </section>
 
@@ -86,21 +84,21 @@ const PartnershipsPage: React.FC = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('partnerships.areas.title')}</h2>
             <p className="section-subtitle">{t('partnerships.areas.subtitle')}</p>
-          </motion.div>
+          </PageLayout>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
             {areas.map((area, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6 text-center">
                 <area.icon className="w-8 h-8 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold text-sm mb-2">{area.title}</h3>
                 <p className="text-xs text-muted-foreground">{area.desc}</p>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('partnerships.global.title')}</h2>
             <p className="section-subtitle">{t('partnerships.global.subtitle')}</p>
-          </motion.div>
+          </PageLayout>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {partners.map((partner, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-5">
@@ -111,13 +109,12 @@ const PartnershipsPage: React.FC = () => {
                 <h3 className="font-semibold text-sm mb-1">{partner.name}</h3>
                 <p className="text-xs text-muted-foreground mb-1">{partner.country}</p>
                 <p className="text-xs text-primary">{partner.focus}</p>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

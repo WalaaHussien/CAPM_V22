@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, User, ArrowRight, ChevronDown, X } from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
@@ -80,8 +79,7 @@ const NewsPage: React.FC = () => {
   const filtered = activeCategory === 'All' ? articles : articles.filter(a => a.category === activeCategory);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -136,7 +134,7 @@ const NewsPage: React.FC = () => {
                         <div className="border-t border-border pt-3 mb-3">
                           <p className="text-sm text-foreground leading-relaxed">{article.fullContent}</p>
                         </div>
-                      </motion.div>
+                      </PageLayout>
                     )}
                   </AnimatePresence>
 
@@ -158,7 +156,7 @@ const NewsPage: React.FC = () => {
                 </div>
               </motion.article>
             ))}
-          </motion.div>
+          </PageLayout>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="premium-card p-8 text-center max-w-lg mx-auto">
             <h2 className="text-xl font-bold mb-3">{t('news.newsletter.title')}</h2>
@@ -167,11 +165,10 @@ const NewsPage: React.FC = () => {
               <Input placeholder={t('news.newsletter.placeholder')} type="email" className="rounded-[6px]" />
               <Button className="rounded-[8px]">{t('news.newsletter.subscribe')}</Button>
             </div>
-          </motion.div>
+          </PageLayout>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 

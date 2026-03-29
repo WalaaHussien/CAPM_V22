@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Stethoscope, FlaskConical, Cpu, MonitorCheck } from 'lucide-react';
 import investmentCampus from '@/assets/investment-campus.jpeg';
 import { Link } from 'react-router-dom';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -26,8 +25,7 @@ const InvestmentPage: React.FC = () => {
   ];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen bg-background">
-      <Header />
+    <PageLayout>
       <main>
         <section className="page-hero">
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
@@ -40,18 +38,18 @@ const InvestmentPage: React.FC = () => {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
               className="flex justify-center gap-6 sm:gap-8 flex-wrap">
               {stats.map((s, i) => (<div key={i} className="text-center"><p className="text-2xl font-bold text-white">{s.value}</p><p className="text-xs text-white/50">{s.label}</p></div>))}
-            </motion.div>
+            </PageLayout>
           </div>
         </section>
         <section className="container mx-auto px-4 md:px-6 py-10 md:py-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="rounded-xl overflow-hidden shadow-lg max-w-3xl mx-auto mb-20">
             <img src={investmentCampus} alt="CapitalMed Campus" className="w-full h-48 sm:h-64 md:h-[350px] object-cover" />
-          </motion.div>
+          </PageLayout>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('investment.opportunities.title')}</h2>
             <p className="section-subtitle">{t('investment.opportunities.subtitle')}</p>
-          </motion.div>
+          </PageLayout>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-3 gap-5 mb-20">
             {opportunities.map((opp, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-6">
@@ -59,21 +57,21 @@ const InvestmentPage: React.FC = () => {
                 <h3 className="font-semibold mb-2">{opp.title}</h3>
                 <p className="text-muted-foreground text-sm mb-3">{opp.desc}</p>
                 <ul className="space-y-1">{opp.items.map((item, j) => (<li key={j} className="text-xs text-muted-foreground flex items-center gap-2"><span className="w-1 h-1 rounded-full bg-accent" />{item}</li>))}</ul>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="section-title">{t('investment.smart.title')}</h2>
-          </motion.div>
+          </PageLayout>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 gap-5 max-w-2xl mx-auto mb-20">
             {[{ icon: Cpu, title: t('investment.smart.digital'), desc: t('investment.smart.digital.desc') }, { icon: MonitorCheck, title: t('investment.smart.simulation'), desc: t('investment.smart.simulation.desc') }].map((item, i) => (
               <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-8 text-center">
                 <item.icon className="w-10 h-10 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
-              </motion.div>
+              </PageLayout>
             ))}
-          </motion.div>
+          </PageLayout>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className="bg-primary/5 border border-primary/15 rounded-xl p-6 md:p-10 text-center">
             <h2 className="text-xl md:text-2xl font-bold mb-5">{t('investment.cta.title')}</h2>
@@ -81,11 +79,10 @@ const InvestmentPage: React.FC = () => {
               <Link to="/contact" className="w-full sm:w-auto"><Button size="lg" className="rounded-[8px] w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">{t('investment.cta.visit')}</Button></Link>
               <Button size="lg" variant="outline" className="rounded-[8px] w-full sm:w-auto">{t('investment.cta.download')}</Button>
             </div>
-          </motion.div>
+          </PageLayout>
         </section>
       </main>
-      <Footer />
-    </motion.div>
+    </PageLayout>
   );
 };
 
