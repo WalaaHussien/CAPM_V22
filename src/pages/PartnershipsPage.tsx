@@ -64,15 +64,20 @@ const PartnershipsPage: React.FC = () => {
               <p className="section-subtitle">A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla</p>
             </motion.div>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {brandEntities.map((entity, i) => (
-                <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-5 text-center">
-                  <div className="h-16 flex items-center justify-center mb-4">
-                    <img src={entity.logo} alt={entity.name} className="max-h-16 max-w-[120px] object-contain" loading="lazy" />
-                  </div>
-                  <h3 className="font-semibold text-sm mb-2">{entity.name}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{entity.desc}</p>
-                </motion.div>
-              ))}
+              {brandEntities.map((entity, i) => {
+                const Icon = entity.icon;
+                return (
+                  <motion.div key={i} variants={fadeUp} whileHover={{ y: -3 }} className="premium-card p-5 text-center">
+                    <div className="h-16 flex items-center justify-center mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Icon className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="font-semibold text-sm mb-2">{entity.name}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{entity.desc}</p>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </div>
         </section>
