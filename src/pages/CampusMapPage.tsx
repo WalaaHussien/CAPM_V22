@@ -807,7 +807,7 @@ const CampusMapPage: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 export default CampusMapPage;
