@@ -51,6 +51,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Quick Access Bar
     'quick.bar.patients': 'Patients',
+    'quick.bar.logout': 'Logout',
     'quick.bar.doctors': 'Doctors',
     'quick.bar.bookNow': 'Book Now',
     'quick.bar.emergency': 'Emergency',
@@ -864,6 +865,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Quick Access Bar
     'quick.bar.patients': 'المرضى',
+    'quick.bar.logout': 'تسجيل الخروج',
     'quick.bar.doctors': 'الأطباء',
     'quick.bar.bookNow': 'احجز الآن',
     'quick.bar.emergency': 'الطوارئ',
