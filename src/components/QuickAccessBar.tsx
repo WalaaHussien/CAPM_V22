@@ -19,12 +19,10 @@ const QuickAccessBar: React.FC = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.3 }}
-      className="bg-card border-b border-border shadow-sm"
     >
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-12 gap-2">
-          {/* Quick action buttons */}
-          <div className="flex items-center gap-2 overflow-x-auto scrollbar-thin flex-1">
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             {actions.map((action) => {
               const Icon = action.icon;
               const content = (
@@ -46,14 +44,6 @@ const QuickAccessBar: React.FC = () => {
             })}
           </div>
 
-          {/* Hotline */}
-          <a
-            href="tel:16999"
-            className="hidden sm:flex items-center gap-2 px-4 py-1.5 bg-destructive/10 rounded-full hover:bg-destructive/20 transition-colors group"
-          >
-            <Phone className="w-3.5 h-3.5 text-destructive animate-pulse" />
-            <span className="text-xs font-bold text-destructive">{t('quick.bar.hotline')}: 16999</span>
-          </a>
         </div>
       </div>
     </motion.div>
