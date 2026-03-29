@@ -8,8 +8,8 @@ const QuickAccessBar: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
   const actions = [
-    { icon: Users, label: t('quick.bar.patients'), href: '/patient-portal', color: 'bg-primary hover:bg-primary/90 text-primary-foreground' },
-    { icon: Stethoscope, label: t('quick.bar.doctors'), href: '/doctors', color: 'bg-secondary hover:bg-secondary/90 text-secondary-foreground' },
+    { icon: Users, label: t('quick.bar.patients'), href: '/patient-portal', color: 'bg-white/20 hover:bg-white/30 text-white' },
+    { icon: Stethoscope, label: t('quick.bar.doctors'), href: '/doctors', color: 'bg-white/20 hover:bg-white/30 text-white' },
     { icon: CalendarCheck, label: t('quick.bar.bookNow'), href: '/contact', color: 'bg-accent hover:bg-accent/90 text-accent-foreground' },
     { icon: Siren, label: t('quick.bar.emergency'), href: 'tel:16999', color: 'bg-destructive hover:bg-destructive/90 text-destructive-foreground', isExternal: true },
   ];
