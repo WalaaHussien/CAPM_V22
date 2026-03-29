@@ -16,9 +16,10 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, showFooter = true }) 
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="min-h-screen overflow-visible bg-background isolate"
+      style={{ '--quick-access-height': '3rem' } as React.CSSProperties}
     >
-      <Header />
       <QuickAccessBar />
+      <Header />
       <main className="relative z-0">{children}</main>
       {showFooter && <Footer />}
     </motion.div>
