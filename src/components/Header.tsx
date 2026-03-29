@@ -58,8 +58,8 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`relative z-50 w-full transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-lg shadow-sm border-b border-border/50'
-          : 'bg-transparent'
+          ? 'bg-primary-dark backdrop-blur-lg shadow-sm border-b border-border/50'
+          : 'bg-primary-dark/95 backdrop-blur-sm'
       }`}
     >
       {/* Top Bar */}
