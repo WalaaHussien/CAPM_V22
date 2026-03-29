@@ -1,3 +1,4 @@
+import QuickAccessBar from '@/components/QuickAccessBar';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, MapPin, Clock, Briefcase, Filter } from 'lucide-react';
@@ -62,6 +63,7 @@ const CareersPage: React.FC = () => {
               className="text-lg text-white/60 max-w-2xl mx-auto">{t('careers.hero.subtitle')}</motion.p>
           </div>
         </section>
+      <QuickAccessBar />
         <section className="container mx-auto px-6 py-8">
           <div className="flex flex-wrap gap-3 items-center mb-6">
             <div className="relative flex-1 min-w-[200px]">
