@@ -864,7 +864,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.location': 'الموقع',
     'nav.faq': 'الأسئلة الشائعة',
     'nav.patientPortal': 'بوابة المريض',
-    'nav.healthcareOverview': 'نظرة عامة على الرعاية الصحية',
+    'nav.healthcareOverview': 'الرعاية الصحية',
 
     // MegaMenu descriptions
     'mega.corporate': 'الشركات',

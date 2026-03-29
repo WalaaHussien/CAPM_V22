@@ -63,7 +63,7 @@ const PartnershipsPage: React.FC = () => {
               <h2 className="section-title">Brand Architecture</h2>
               <p className="section-subtitle">A group of industries in health, education, and investment, headed by Dr. Hassan Al-Kalla</p>
             </motion.div>
-            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
               {brandEntities.map((entity, i) => {
                 const Icon = entity.icon;
                 return (
