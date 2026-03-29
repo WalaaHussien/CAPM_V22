@@ -118,7 +118,7 @@ const NewsPage: React.FC = () => {
           <p className="text-center text-xs text-muted-foreground mb-8">
             {language === 'ar' ? `عرض ${filtered.length} نتيجة` : `Showing ${filtered.length} result${filtered.length !== 1 ? 's' : ''}`}
           </p>
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+          <motion.div variants={stagger} initial="hidden" animate="visible" className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
             {filtered.map((article) => (
               <motion.article key={article.id} variants={fadeUp} whileHover={expandedId !== article.id ? { y: -3 } : {}}
                 layout className="premium-card overflow-hidden p-0">
