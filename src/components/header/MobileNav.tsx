@@ -91,6 +91,17 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
 
           <Separator className="my-3" />
 
+          {/* Patient Portal CTA */}
+          <Link
+            to="/patient-portal"
+            onClick={onClose}
+            className="flex items-center gap-3 mx-3 px-4 py-3 rounded-xl bg-accent text-accent-foreground font-semibold transition-all duration-200 hover:bg-accent/90"
+          >
+            <span className="text-sm">{t('nav.patientPortal')}</span>
+          </Link>
+
+          <Separator className="my-3" />
+
           {/* Language Switcher */}
           <div className="flex items-center gap-2 px-4 py-2">
             <Globe className="w-4 h-4 text-muted-foreground" />
