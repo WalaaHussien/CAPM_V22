@@ -283,11 +283,10 @@ const DoctorsPage: React.FC = () => {
                         <Badge key={j} className="text-[11px] font-normal rounded-full bg-primary text-primary-foreground">{h}</Badge>
                       ))}
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-4 border-t border-border pt-3">
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground border-t border-border pt-3">
                       <GraduationCap className="w-3.5 h-3.5 text-primary" />
                       <span>{spec.fellowships} {txt('international fellowships', 'زمالة دولية', 'bourses internationales')}</span>
                     </div>
-
                   </div>
                 </motion.div>
               );
