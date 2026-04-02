@@ -47,16 +47,17 @@ const Hero: React.FC = () => {
             alt="CapitalMed"
             loading={index === 0 ? "eager" : "lazy"}
             fetchPriority={index === 0 ? "high" : "auto"}
-            className="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105"
+            className="absolute inset-0 w-full h-full object-cover scale-105"
             initial={false}
             animate={{ opacity: index === currentSlide ? 1 : 0 }}
             transition={{ duration: 1.5, ease: 'easeInOut' }}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(193,100%,10%)]/80 via-[hsl(193,100%,18%)]/55 to-[hsl(193,90%,24%)]/18" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(193,100%,8%)]/50 to-transparent" />
-        {/* Cyan glow accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_40%,hsl(193_100%_50%_/_0.12)_0%,transparent_70%)]" />
+        {/* Increased transparency and updated to 224 navy hue */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(224,80%,10%)]/60 via-[hsl(224,70%,15%)]/30 to-[hsl(224,60%,20%)]/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(224,80%,8%)]/40 to-transparent" />
+        {/* Subtle accent glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_40%,hsl(224_80%_40%_/_0.10)_0%,transparent_70%)]" />
       </div>
 
       {/* Content */}
