@@ -15,106 +15,129 @@
     --header-height: 7.75rem;
     --section-space: clamp(4rem, 7vw, 6rem);
 
-    /* Primary — Accessible Teal-Blue (60-30-10: 10% accent action color) */
-    --primary: 193 65% 38%; /* Desaturated accessible teal */
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 193 50% 78%; /* Soft teal for hover states */
-    --primary-dark: 193 70% 26%; /* Deep teal for active/pressed */
+    /*
+     * CapitalMed Color System — Built around #1D3987 (Navy Blue)
+     * 60-30-10 Rule:
+     *   60% — Neutral light backgrounds (off-white, soft blue-gray)
+     *   30% — Navy blue family (primary, secondary, hero, footer)
+     *   10% — Medical teal accent for CTAs, icons, highlights
+     *
+     * #1D3987 = hsl(224, 63%, 33%)
+     * Shade scale:
+     *   50:  hsl(224, 60%, 97%)  — barely-blue white
+     *   100: hsl(224, 55%, 93%)  — light navy tint
+     *   200: hsl(224, 58%, 85%)  — soft blue
+     *   300: hsl(224, 60%, 72%)  — medium-light
+     *   400: hsl(224, 62%, 55%)  — medium
+     *   500: hsl(224, 63%, 44%)  — medium-dark (lighter brand)
+     *   600: hsl(224, 63%, 33%)  → #1D3987 BRAND
+     *   700: hsl(224, 65%, 24%)  — dark navy
+     *   800: hsl(224, 68%, 16%)  — very dark
+     *   900: hsl(224, 70%, 9%)   — near-black navy
+     *
+     * Accent: Medical Teal hsl(193, 68%, 42%)
+     */
 
-    /* Secondary — Calm Navy (30% structural color) */
-    --secondary: 208 42% 28%; /* Deep professional navy-blue */
+    /* Primary — #1D3987 Brand Navy */
+    --primary: 224 63% 33%;             /* #1D3987 exact */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 224 60% 72%;       /* shade-300: hover tints */
+    --primary-dark: 224 65% 24%;        /* shade-700: active/pressed */
+
+    /* Secondary — Darker Navy for hero/footer structure */
+    --secondary: 224 65% 22%;           /* shade-800 area */
     --secondary-foreground: 0 0% 100%;
 
-    /* 60% — Background surfaces: very light cool white */
-    --background: 200 18% 99%; /* Barely-tinted white — easy on eyes */
-    /* Main text — high contrast, slightly warm dark */
-    --foreground: 210 25% 12%;
+    /* 60% — Backgrounds: very light navy-tinted whites */
+    --background: 224 40% 99%;          /* shade-50: barely perceptible tint */
+    --foreground: 224 40% 11%;          /* shade-900 area: deep navy text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 25% 12%;
+    --card: 0 0% 100%;                  /* Pure white cards */
+    --card-foreground: 224 40% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 25% 12%;
+    --popover-foreground: 224 40% 11%;
 
-    /* Muted — Gentle gray-blue for alternate sections */
-    --muted: 203 30% 96%;
-    --muted-foreground: 210 14% 44%;
+    /* Muted — shade-50 area for alternate sections */
+    --muted: 224 45% 97%;               /* shade-50 */
+    --muted-foreground: 224 20% 45%;    /* readable mid-tone */
 
-    /* Accent — Warm Gold (softer, more accessible) */
-    --accent: 38 78% 46%; /* #D4930E — darker amber for WCAG AA contrast */
+    /* 10% Accent — Medical Teal (complementary to navy) */
+    --accent: 193 68% 42%;              /* hsl(193,68%,42%) = #22A8C8 */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 52%; /* Slightly softer red */
+    --destructive: 0 68% 50%;           /* Clear medical red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%; /* Soft cool-gray borders */
-    --input: 210 20% 92%;
-    --ring: 193 65% 38%;
+    --border: 224 25% 88%;              /* Soft navy-tinted border */
+    --input: 224 25% 91%;
+    --ring: 224 63% 33%;                /* Focus ring = brand color */
 
     --radius: 0.5rem;
 
-    /* Gradients — refined soft teal-navy */
-    --gradient-hero: linear-gradient(135deg, hsl(193 65% 30%) 0%, hsl(208 50% 22%) 50%, hsl(215 55% 15%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(193 65% 38%) 0%, hsl(208 42% 28%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(193 55% 42%) 0%, hsl(193 60% 30%) 100%);
-    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(203 30% 96%) 100%);
+    /* Gradients — Navy family */
+    --gradient-hero: linear-gradient(150deg, hsl(224 63% 33%) 0%, hsl(224 65% 22%) 55%, hsl(224 68% 14%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(224 63% 33%) 0%, hsl(224 65% 22%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(193 68% 42%) 0%, hsl(193 70% 30%) 100%);
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(224 45% 97%) 100%);
 
-    /* Shadows — soft neutral, not color-tinted */
-    --shadow-sm: 0 1px 3px 0 rgba(30, 60, 80, 0.06);
-    --shadow-md: 0 4px 12px -2px rgba(30, 60, 80, 0.09);
-    --shadow-lg: 0 12px 24px -4px rgba(30, 60, 80, 0.10);
-    --shadow-xl: 0 20px 40px -8px rgba(30, 60, 80, 0.12);
+    /* Shadows — navy-blue tinted, soft */
+    --shadow-sm: 0 1px 3px 0 rgba(29, 57, 135, 0.06);
+    --shadow-md: 0 4px 14px -2px rgba(29, 57, 135, 0.10);
+    --shadow-lg: 0 12px 28px -4px rgba(29, 57, 135, 0.12);
+    --shadow-xl: 0 20px 44px -8px rgba(29, 57, 135, 0.14);
 
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 210 25% 12%;
-    --sidebar-primary: 193 65% 38%;
+    --sidebar-foreground: 224 40% 11%;
+    --sidebar-primary: 224 63% 33%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 203 30% 95%;
-    --sidebar-accent-foreground: 210 25% 12%;
-    --sidebar-border: 210 20% 90%;
-    --sidebar-ring: 193 65% 38%;
+    --sidebar-accent: 224 45% 96%;
+    --sidebar-accent-foreground: 224 40% 11%;
+    --sidebar-border: 224 25% 88%;
+    --sidebar-ring: 224 63% 33%;
   }
 
   .dark {
-    --background: 212 35% 9%; /* Deep navy, not pure black — easier on eyes */
-    --foreground: 210 25% 93%;
+    /* Dark mode: Navy family, very dark backgrounds */
+    --background: 224 50% 8%;           /* Deep navy — shade-900 feel */
+    --foreground: 224 30% 93%;          /* Light navy-white text */
 
-    --card: 210 30% 12%;
-    --card-foreground: 210 25% 93%;
+    --card: 224 45% 11%;                /* Slightly lighter card surface */
+    --card-foreground: 224 30% 93%;
 
-    --popover: 210 30% 12%;
-    --popover-foreground: 210 25% 93%;
+    --popover: 224 45% 11%;
+    --popover-foreground: 224 30% 93%;
 
-    --primary: 193 60% 50%; /* Slightly brighter teal on dark bg for contrast */
+    --primary: 224 62% 55%;             /* shade-400: brighter navy for dark bg */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 193 50% 72%;
-    --primary-dark: 193 65% 36%;
+    --primary-light: 224 60% 72%;       /* shade-300 */
+    --primary-dark: 224 63% 33%;        /* exact brand on dark */
 
-    --secondary: 208 38% 38%; /* Lighter navy for dark mode surfaces */
+    --secondary: 224 50% 30%;           /* shade-700 area: mid dark navy */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 28% 16%;
-    --muted-foreground: 210 18% 60%;
+    --muted: 224 35% 15%;               /* Dark muted surface */
+    --muted-foreground: 224 20% 60%;    /* Mid-light readable text */
 
-    --accent: 38 72% 52%; /* Slightly brighter gold on dark */
+    --accent: 193 65% 50%;              /* Teal brighter on dark bg */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 60% 52%;
+    --destructive: 0 62% 54%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 20%;
-    --input: 210 25% 20%;
-    --ring: 193 60% 50%;
+    --border: 224 30% 20%;              /* Dark navy border */
+    --input: 224 30% 20%;
+    --ring: 224 62% 55%;
 
-    --sidebar-background: 212 35% 8%;
-    --sidebar-foreground: 210 25% 88%;
-    --sidebar-primary: 193 60% 50%;
+    --sidebar-background: 224 50% 7%;
+    --sidebar-foreground: 224 30% 90%;
+    --sidebar-primary: 224 62% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 28% 15%;
-    --sidebar-accent-foreground: 210 25% 88%;
-    --sidebar-border: 210 25% 18%;
-    --sidebar-ring: 193 60% 55%;
+    --sidebar-accent: 224 35% 14%;
+    --sidebar-accent-foreground: 224 30% 90%;
+    --sidebar-border: 224 30% 18%;
+    --sidebar-ring: 224 62% 60%;
   }
 }
 
@@ -250,7 +273,7 @@
   /* Premium Page Hero with wave divider */
   .page-hero {
     @apply relative overflow-hidden pb-20 pt-44 md:pb-24 md:pt-48;
-    background: linear-gradient(180deg, hsl(193, 62%, 34%) 0%, hsl(208, 48%, 22%) 100%);
+    background: linear-gradient(150deg, hsl(224, 63%, 33%) 0%, hsl(224, 65%, 22%) 55%, hsl(224, 68%, 14%) 100%);
   }
 
   .page-hero h1,
