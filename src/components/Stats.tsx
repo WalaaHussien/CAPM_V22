@@ -88,7 +88,7 @@ const Stats: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors duration-300">
                   <Icon className="w-5 h-5 text-accent" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-accent mb-1">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
                   <AnimatedCounter
                     value={getStatValue(stat.labelKey.split('.')[1], stat.value)}
                     suffix={stat.suffix}
